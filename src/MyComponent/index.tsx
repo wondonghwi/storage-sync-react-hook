@@ -5,8 +5,8 @@ import { useSetStorage } from '../hooks/useSetStorage';
 
 const MyComponent = () => {
   const [value, setValue] = useStorage<string>('myKey', '');
-  const values = useStorageValue('yourKey', '');
-  const setValues = useSetStorage('yourKey');
+  const values = useStorageValue<string>('yourKey', '');
+  const setValues = useSetStorage<string>('yourKey');
 
   return (
     <div>
